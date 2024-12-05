@@ -1,0 +1,116 @@
+/* ChatRoom.css */
+
+.chat-app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+}
+
+.messages-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #e9ecef;
+}
+
+/* Message bubble styles */
+.message {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.own-message {
+  justify-content: flex-end; /* Right align own messages */
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.own-message .message-bubble {
+  background-color: #d4edda; /* Green for own messages */
+}
+
+.sender-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  padding: 10px;
+  font-style: italic;
+  color: #888;
+  text-align: left;
+  margin-left: 10px;
+}
+
+/* Input area styling */
+.message-input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+/* Scrollbar customization */
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
